@@ -35,7 +35,7 @@ if($_FILES['photo']['name'])
 // Create blob REST proxy.
 $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
-$content = fopen($_FILES['photo']['tmp_name'], "r");
+/*$content = fopen($_FILES['photo']['tmp_name'], "r");
 $blob_name = "test";
 
 try    {
@@ -50,12 +50,16 @@ catch(ServiceException $e){
     $error_message = $e->getMessage();
     echo $code.": ".$error_message."<br />";
 }
-
+*/
 
 
 
 }
 
-
+//you get the following information for each file:
+echo $_FILES['field_name']['name'];
+//$_FILES['field_name']['size']
+//$_FILES['field_name']['type']
+//$_FILES['field_name']['tmp_name']
 
 ?>
