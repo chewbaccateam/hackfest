@@ -33,7 +33,7 @@ if($_FILES['photo']['name'])
     echo "file is here";
 
 // Create blob REST proxy.
-$blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
+//$blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
 /*$content = fopen($_FILES['photo']['tmp_name'], "r");
 $blob_name = "test";
