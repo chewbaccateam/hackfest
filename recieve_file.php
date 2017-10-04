@@ -1,7 +1,7 @@
 <?php 
 
 namespace MicrosoftAzure\Storage\Samples;
-require_once "../vendor/autoload.php";
+require_once "/vendor/autoload.php";
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 use MicrosoftAzure\Storage\Blob\Models\ListContainersResult;
@@ -24,7 +24,7 @@ use MicrosoftAzure\Storage\Common\SharedAccessSignatureHelper;
 use MicrosoftAzure\Storage\Common\ServicesBuilder;
 
 $connectionString = 'DefaultEndpointsProtocol=https;AccountName=hfchewbaccastor;AccountKey=0N1QI4pOfpedFTpgI7W+YwAm+V9NyFA+89J8JXjXeYfaXQRtCQrVz0fyOueJYf6ZyoqFUGKC7hsQuxB/UcgX7A==;EndpointSuffix=core.usgovcloudapi.net';
-//$blobClient = ServicesBuilder::getInstance()->createBlobService($connectionString);
+$blobClient = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
 
 //if they DID upload a file...
