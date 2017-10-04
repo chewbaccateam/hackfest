@@ -56,10 +56,5 @@ catch(ServiceException $e){
 
 }
 
-//you get the following information for each file:
-echo $_FILES['field_name']['name'];
-//$_FILES['field_name']['size']
-//$_FILES['field_name']['type']
-//$_FILES['field_name']['tmp_name']
 
 ?>
