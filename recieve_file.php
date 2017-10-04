@@ -3,7 +3,7 @@
 //if they DID upload a file...
 if($_FILES['photo']['name'])
 {
-    echo file is here
+    echo "file is here";
 	//if no errors...
 	if(!$_FILES['photo']['error'])
 	{
@@ -32,7 +32,7 @@ if($_FILES['photo']['name'])
 }
 
 //you get the following information for each file:
-echo $_FILES['field_name']['name']
+echo $_FILES['field_name']['name'];
 //$_FILES['field_name']['size']
 //$_FILES['field_name']['type']
 //$_FILES['field_name']['tmp_name']
