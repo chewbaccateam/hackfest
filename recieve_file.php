@@ -58,7 +58,7 @@ catch(ServiceException $e){
 
         // Request parameters.
         var params = {
-            "visualFeatures": "Categories,Description,Color",
+            "visualFeatures": "Description",
             "details": "",
             "language": "en",
         };
@@ -84,6 +84,8 @@ catch(ServiceException $e){
         })
 
         .done(function(data) {
+            $("#description").val(data.description.captions.text);
+            $("#confidence").val(data.description.captions.confidence);
             // Show formatted JSON on webpage.
             $("#responseTextArea").val(JSON.stringify(data, null, 2));
         })
@@ -103,7 +105,9 @@ Enter the URL to an image of a natural or artificial landmark, then click the <s
 Image to analyze: <input style="visibility:hidden;" type="text" name="inputImage" id="inputImage" value="https://hfchewbaccastor.blob.core.usgovcloudapi.net/images/test" />
 <button  style="visibility:hidden;" onclick="processImage()">Analyze image</button>
 <br><br>
-<div id="wrapper" style="width:1020px; display:table;">
+<h1>I am <span id="confidence"></span>% confident that this is a <span id="description"></span></h1>
+
+<div id="wrapper" style="width:1020px; display:table;visibility:hidden;">
     <div id="jsonOutput" style="width:600px; display:table-cell;">
         Response:
         <br><br>
